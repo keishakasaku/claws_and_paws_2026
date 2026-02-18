@@ -1,4 +1,6 @@
-/* General Reset */
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 html, body {
-  overflow-x: hidden; /* prevents horizontal scrolling */
+  overflow-x: hidden;
 }
 
 body {
@@ -16,38 +18,62 @@ body {
   background-color: #ffffff;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   background-color: #ffffff;
   border-bottom: 2px solid #eaeaea;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #000000 !important;
+  color: #000 !important;
 }
 
 .navbar-nav .nav-link {
   color: #4a4a4a;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #000000;
+  color: #000;
 }
 
-/* Hero Split Layout */
+/* =========================
+   HERO + CAROUSEL FIX (CRITICAL)
+========================= */
 .hero-split {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+/* FORCE carousel to fill hero */
+.hero-split .carousel,
+.hero-split .carousel-inner,
+.hero-split .carousel-item {
+  height: 100%;
+}
+
+/* prevent bootstrap margin issues */
+.carousel {
+  margin-bottom: 0 !important;
+}
+
+.carousel-inner {
+  overflow: hidden;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
 .hero-container {
   position: relative;
   width: 100%;
@@ -56,6 +82,7 @@ body {
 
 .hero-bg-image {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -65,20 +92,20 @@ body {
 
 .hero-content {
   position: relative;
-  display: flex;
-  height: 100%;
-  align-items: center;
   z-index: 1;
-
-  /* FIX: reduce padding so total width ≤ 100% */
-  padding: 0 2%;
+  height: 100%;
+  display: flex;
+  align-items: center;
   gap: 2rem;
+  padding: 0 2%;
 }
 
-.left-text, .right-text {
+/* LEFT + RIGHT TEXT */
+.left-text,
+.right-text {
   flex: 1;
   max-width: 25%;
-  color: white;
+  color: #fff;
   padding: 2rem;
 }
 
@@ -90,6 +117,7 @@ body {
   text-align: left;
 }
 
+/* CENTER IMAGE */
 .center-image {
   flex: 1;
   max-width: 50%;
@@ -100,10 +128,10 @@ body {
 .image-frame {
   width: 80%;
   max-width: 500px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid rgba(255,255,255,0.2);
+  border: 5px solid rgba(255,255,255,0.25);
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
@@ -113,6 +141,7 @@ body {
   object-fit: cover;
 }
 
+/* HERO TEXT */
 .hero-content h2 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -127,72 +156,16 @@ body {
 
 .hero-content p {
   font-size: 1.1rem;
-  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.btn-outline-light {
-  border-width: 2px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .hero-content {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  
-  .left-text, .right-text, .center-image {
-    max-width: 100%;
-    flex: none;
-    text-align: center;
-  }
-  
-  .left-text {
-    order: 1;
-  }
-  
-  .center-image {
-    order: 2;
-    margin: 2rem 0;
-  }
-  
-  .right-text {
-    order: 3;
-  }
-  
-  .image-frame {
-    width: 60%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-content h2 {
-    font-size: 2.5rem;
-  }
-  
-  .image-frame {
-    width: 80%;
-  }
-}
-
-/* Carousel Control Fixes */
+/* =========================
+   CAROUSEL CONTROLS
+========================= */
 .carousel-control-prev,
 .carousel-control-next {
-  z-index: 10;
   width: 5%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-size: 100% 100%;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+  z-index: 15;
 }
 
 .carousel-control-prev {
@@ -203,7 +176,41 @@ body {
   right: 1rem;
 }
 
-/* Links Section */
+/* =========================
+   RESPONSIVE HERO
+========================= */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .left-text,
+  .right-text,
+  .center-image {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .image-frame {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .image-frame {
+    width: 80%;
+  }
+}
+
+/* =========================
+   LINKS SECTION
+========================= */
 .links-section {
   padding: 4rem 0;
   background-color: #f8f9fa;
@@ -215,84 +222,44 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .link-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
 }
 
 .card-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.5s ease;
-}
-
-.link-card:hover .card-image {
-  transform: scale(1.1);
 }
 
 .card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
+  inset: 0;
+  background: rgba(0,0,0,0.45);
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
-}
-
-.link-card:hover .card-overlay {
-  background: rgba(0,0,0,0.6);
+  align-items: center;
 }
 
 .link-btn {
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   padding: 1rem 2rem;
-  border: 2px solid white;
+  border: 2px solid #fff;
   border-radius: 50px;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
 }
 
-.link-btn:hover {
-  background: rgba(255,255,255,0.2);
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .links-section {
-    padding: 2rem 0;
-  }
-  
-  .link-card {
-    height: 250px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .link-btn {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-/* News Section */
+/* =========================
+   NEWS SECTION
+========================= */
 .news {
-  padding: 3rem 2rem;
-  background-color: #fffcfc;
+  padding: 3rem 0;
 }
 
 .news .card {
@@ -302,55 +269,203 @@ body {
 }
 
 .news .card-img-top {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   height: 220px;
   object-fit: cover;
 }
 
-.news .card-title {
-  color: #2a4b2e;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-.news .btn-primary {
-  background-color: #719d60;
-  border: none;
-}
-
-.news .btn-primary:hover {
-  background-color: #293f22;
-}
-
-/* Footer */
-.footer {
-  background-color: #2b533000;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-/* General style */
+/* =========================
+   HEADINGS
+========================= */
 h1 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c3e50;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  position: relative;
+  margin: 2.5rem 0 1.5rem;
+  font-size: 2.5rem;
 }
 
 h1::after {
   content: "";
-  display: block;
   width: 80px;
   height: 3px;
-  background-color: #0a0c0b;
+  background: #000;
+  display: block;
   margin: 0.5rem auto 0;
-  border-radius: 2px;
 }
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+
+/* =========================
+   COMMUNITIES PAGE
+========================= */
+.communities-page {
+  background-color: #fafafa;
+}
+
+.page-header h1 {
+  font-size: 2.6rem;
+}
+
+.community-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header-row h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* TAGS */
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tag.economy {
+  background: #e6f4ea;
+  color: #2a6b3f;
+}
+
+.tag.tradition {
+  background: #fef3e2;
+  color: #8a4b00;
+}
+
+.tag.innovation {
+  background: #e8f0fe;
+  color: #1a4fb4;
+}
+
+.tag.tourism {
+  background: #e0f7fa;
+  color: #006064;
+}
+
+/* Image polish */
+.community-card img {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .community-card {
+    padding: 1.5rem;
+  }
+
+  .card-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* ---------- GLOBAL HELPERS ---------- */
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* ---------- HERO ---------- */
+.page-hero {
+  position: relative;
+  background-image: url("images/the 3 muskurtears.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.page-hero p {
+  max-width: 550px;
+}
+
+/* ---------- PROGRAMS ---------- */
+.program-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.program-row.reverse {
+  direction: rtl;
+}
+
+.program-row.reverse * {
+  direction: ltr;
+}
+
+.program-image {
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.program-text h3 {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .program-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- STORY ---------- */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: #f8f9fa;
+  padding: 40px 0;
+  margin-top: 80px;
+}
+

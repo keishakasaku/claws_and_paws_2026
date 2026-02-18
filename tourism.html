@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claws And Paws</title>
-  <link rel="shortcut icon" href="images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="custom.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claws And Paws — Sustainable Tourism</title>
+
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
 </head>
+
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/logo.png" alt="Claws And Paws" width="40" height="40" />
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="images/logo.png" alt="Claws And Paws" width="40" height="40" class="me-2">
       Claws And Paws
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -22,85 +24,114 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="what_we_do.html">What We Do</a></li>
+        <li class="nav-item"><a class="nav-link active" href="tourism.html">Tourism</a></li>
         <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<body>
-    <div class="secret-banner">
-        <div class="secret-code">Access Code: TRAVEL2023</div>
+<!-- Page Header -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h1 class="mb-2">Responsible & Sustainable Tourism</h1>
+    <p class="lead text-muted">
+      Discover extraordinary destinations while respecting nature, culture, and communities
+    </p>
+  </div>
+</section>
+
+<!-- Tourism Content -->
+<section class="py-5">
+  <div class="container">
+
+    <!-- Destination 1 -->
+    <div class="community-card mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <img src="images/hunterix.jpg" alt="The Whispering Caves" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+          <h2 class="h4 mb-3">The Whispering Caves</h2>
+          <p><strong>Location:</strong> Remote coastal formations</p>
+          <p>
+            Ancient caves where the walls seem to whisper secrets of past civilizations.
+            These natural formations are accessible only during low tide and require
+            careful planning to visit safely.
+          </p>
+          <p class="text-muted small">
+            Visitor note: Bring a flashlight, move gently, and respect the fragile cave ecosystem.
+          </p>
+        </div>
+      </div>
     </div>
-    
-    <header class="hidden-header">
-        <h1><span class="reveal">✧</span> Secret Travel Guide <span class="reveal">✧</span></h1>
-        <p class="tagline">Hidden gems only the adventurous find</p>
-    </header>
 
-    <main class="secret-content">
-        <section class="destination-grid">
-            <div class="destination-card">
-                <div class="card-image" style="background-image: url('images/hunterix.jpg')"></div>
-                <div class="card-content">
-                    <h3>The Whispering Caves</h3>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Coordinates: 34.0522° N, 118.2437° W</p>
-                    <p>Ancient caves where the walls seem to whisper secrets of past civilizations. Accessible only during low tide.</p>
-                    <div class="secret-tip">
-                        <span class="tip-icon"><i class="fas fa-key"></i></span>
-                        Local tip: Bring a flashlight and whisper your wish to the north wall.
-                    </div>
-                </div>
-            </div>
+    <!-- Destination 2 -->
+    <div class="community-card mb-5">
+      <div class="row align-items-center g-4 flex-md-row-reverse">
+        <div class="col-md-6">
+          <img src="images/light.jpg" alt="Moonlight Meadow" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+          <h2 class="h4 mb-3">Moonlight Meadow</h2>
+          <p><strong>Location:</strong> Open grasslands</p>
+          <p>
+            A quiet meadow known for its faint natural glow on clear full-moon nights.
+            Scientists continue to study the phenomenon, believed to be linked to unique
+            soil and plant interactions.
+          </p>
+          <p class="text-muted small">
+            Best experienced late at night under a full moon, away from artificial lights.
+          </p>
+        </div>
+      </div>
+    </div>
 
-            <div class="destination-card">
-                <div class="card-image" style="background-image: url('images/light.jpg')"></div>
-                <div class="card-content">
-                    <h3>Moonlight Meadow</h3>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Coordinates: 48.8566° N, 2.3522° E</p>
-                    <p>A field that glows faintly blue on nights with a full moon. Scientists still debate the cause.</p>
-                    <div class="secret-tip">
-                        <span class="tip-icon"><i class="fas fa-key"></i></span>
-                        Local tip: Visit between 11pm-1am for the strongest effect.
-                    </div>
-                </div>
-            </div>
+    <!-- Destination 3 -->
+    <div class="community-card mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <img src="images/how it's done.jpg" alt="The Librarian's Retreat" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+          <h2 class="h4 mb-3">The Librarian’s Retreat</h2>
+          <p><strong>Location:</strong> Historic academic quarter</p>
+          <p>
+            A hidden reading space tucked within an old university building.
+            This quiet retreat houses rare manuscripts and serves as a reminder
+            of the importance of preserving knowledge and history.
+          </p>
+          <p class="text-muted small">
+            Access is limited and respectful conduct is required at all times.
+          </p>
+        </div>
+      </div>
+    </div>
 
-            <div class="destination-card">
-                <div class="card-image" style="background-image: url('images/how\ it\'s\ done.jpg')"></div>
-                <div class="card-content">
-                    <h3>The Librarian's Retreat</h3>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Coordinates: 51.5074° N, 0.1278° W</p>
-                    <p>A hidden reading room behind a bookcase in an old university. Contains rare manuscripts.</p>
-                    <div class="secret-tip">
-                        <span class="tip-icon"><i class="fas fa-key"></i></span>
-                        Local tip: Ask for "the special collection" at the front desk.
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Responsible Travel -->
+    <div class="community-card">
+      <h2 class="h4 mb-3">Responsible Travel Guidelines</h2>
+      <ul class="mb-0">
+        <li>Visit during off-peak hours to reduce environmental impact</li>
+        <li>Respect local communities, cultures, and wildlife</li>
+        <li>Leave no trace — take only memories, leave only footprints</li>
+        <li>Share locations responsibly and thoughtfully</li>
+      </ul>
+    </div>
 
-        <section class="access-instructions">
-            <h2><i class="fas fa-lock"></i> How to Access These Locations</h2>
-            <ol>
-                <li>Memorize the coordinates or save them privately</li>
-                <li>Visit during off-peak hours</li>
-                <li>Be respectful of these special places</li>
-                <li>Share only with trusted friends</li>
-            </ol>
-            <div class="disclaimer">
-                <i class="fas fa-exclamation-triangle"></i> These locations are not tourist attractions - visit at your own discretion.
-            </div>
-        </section>
-    </main>
+  </div>
+</section>
 
-    <footer>
-        
-        <a href="index.html" class="btn btn-primary"> Made with love by Olof Jonson</a>
-    </footer>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <a href="index.html" class="btn btn-primary">Made with love by Olof Jonson</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

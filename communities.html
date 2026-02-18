@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claws And Paws</title>
-  <link rel="shortcut icon" href="images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="custom.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claws And Paws — Kenyan Communities</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/logo.png" alt="Claws And Paws" width="40" height="40" />
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="images/logo.png" alt="Claws And Paws" width="40" height="40" class="me-2">
       Claws And Paws
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -22,123 +22,109 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="what_we_do.html">What We Do</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<section class="communities-page py-5">
+  <div class="container">
 
-    <header>
-        <h1>Kenyan Communities: Culture & Livelihoods</h1>
-        <p>Celebrating the diversity and resilience of local communities</p>
+    <header class="page-header text-center mb-5">
+      <h1 class="mb-2">Kenyan Communities: Culture & Livelihoods</h1>
+      <p class="lead">Celebrating the diversity and resilience of local communities</p>
     </header>
 
-    <main>
-        <!-- Agriculture Section -->
-        <section class="community-card" id="agriculture">
-            <div class="community-header">
-                <h2>Agriculture & Farming</h2>
-                <span class="tag economy">Economic Backbone</span>
-            </div>
-            <div class="community-content">
-                <img src="images/farmers.jpg" alt="Farmers harvesting crops">
-                <div class="details">
-                    <p><strong>Key Regions:</strong> Central Highlands, Rift Valley</p>
-                    <p><strong>Practices:</strong> Tea, coffee, maize, and dairy farming</p>
-                    <p><strong>Challenges:</strong> Climate change, market access</p>
-                    <p>Farming communities grow crops and raise livestock to supply fresh produce
-                       to Nairobi City Market, a bustling hub where traders and buyers meet.
-                        Meanwhile, in Lamu, fishing thrives as local fishermen harvest the rich 
-                        Indian Ocean waters, providing seafood to coastal and inland markets. Both 
-                        sectors support livelihoods and feed Kenya’s growing population.
+    <!-- Agriculture -->
+    <div class="community-card">
+      <div class="card-header-row">
+        <h2>Agriculture & Farming</h2>
+        <span class="tag economy">Economic Backbone</span>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img src="images/farmers.jpg" alt="Farmers harvesting crops" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <p><strong>Key Regions:</strong> Central Highlands, Rift Valley</p>
+          <p><strong>Practices:</strong> Tea, coffee, maize, and dairy farming</p>
+          <p><strong>Challenges:</strong> Climate change, market access</p>
+          <p>Farming communities grow crops and raise livestock to supply fresh produce to Nairobi City Market, a bustling hub where traders and buyers meet. Meanwhile, in Lamu, fishing thrives as local fishermen harvest the rich Indian Ocean waters, providing seafood to coastal and inland markets. Both sectors support livelihoods and feed Kenya’s growing population.</p>
+        </div>
+      </div>
+    </div>
 
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- Culture -->
+    <div class="community-card">
+      <div class="card-header-row">
+        <h2>Cultural Heritage</h2>
+        <span class="tag tradition">Traditional Roots</span>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img src="images/traditional-dance-performance-stockcake.jpg" alt="Maasai dancers performing" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <p><strong>Communities:</strong> Maasai, Luo, Kikuyu, Swahili</p>
+          <p><strong>Traditions:</strong> Music, dance, storytelling, crafts</p>
+          <p><strong>Preservation:</strong> Community-led cultural festivals</p>
+          <p>Communities play a vital role in Kenya's economy, from farming villages growing maize and vegetables to fishing cooperatives in Lamu hauling in fresh catches...</p>
+        </div>
+      </div>
+    </div>
 
-        <!-- Cultural Heritage Section -->
-        <section class="community-card" id="culture">
-            <div class="community-header">
-                <h2>Cultural Heritage</h2>
-                <span class="tag tradition">Traditional Roots</span>
-            </div>
-            <div class="community-content">
-                <img src="images/traditional-dance-performance-stockcake.jpg" alt="Maasai dancers performing">
-                <div class="details">
-                    <p><strong>Communities:</strong> Maasai, Luo, Kikuyu, Swahili</p>
-                    <p><strong>Traditions:</strong> Music, dance, storytelling, crafts</p>
-                    <p><strong>Preservation:</strong> Community-led cultural festivals</p>
-                    <p>Communities play a vital role in Kenya's economy, from farming villages 
-                      growing maize and vegetables to fishing cooperatives in Lamu hauling in fresh 
-                      catches. In Nairobi, bustling city markets connect these producers with urban
-                      consumers, creating a vibrant trade network. Whether in rural fields, coastal
-                      docks, or crowded market stalls, communities work together to sustain 
-                      livelihoods and feed the nation. Their shared efforts strengthen cultural 
-                      ties and drive local development.
+    <!-- Urban -->
+    <div class="community-card">
+      <div class="card-header-row">
+        <h2>Urban Livelihoods</h2>
+        <span class="tag innovation">Innovation Hubs</span>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img src="images/city market.jpg" alt="Nairobi city market" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <p><strong>Cities:</strong> Nairobi, Mombasa, Kisumu</p>
+          <p><strong>Economy:</strong> Tech startups, trade, services</p>
+          <p><strong>Challenges:</strong> Unemployment, housing</p>
+          <p>Nairobi City Market, a vibrant trading hub in Kenya's capital, buzzes with activity as farmers, traders, and shoppers converge daily...</p>
+        </div>
+      </div>
+    </div>
 
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- Coastal -->
+    <div class="community-card">
+      <div class="card-header-row">
+        <h2>Coastal Communities</h2>
+        <span class="tag tourism">Tourism & Fishing</span>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img src="images/sailing-boats-lamu-africa-BY8B81.jpg" alt="Fishing boats in Lamu" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <p><strong>Livelihoods:</strong> Fishing, tourism, coconut farming</p>
+          <p><strong>Culture:</strong> Swahili architecture, festivals</p>
+          <p><strong>Threats:</strong> Overfishing, coral reef degradation</p>
+          <p>Fishing in Lamu is more than an industry—it’s a centuries-old way of life...</p>
+        </div>
+      </div>
+    </div>
 
-        <!-- Urban Livelihoods Section -->
-        <section class="community-card" id="urban">
-            <div class="community-header">
-                <h2>Urban Livelihoods</h2>
-                <span class="tag innovation">Innovation Hubs</span>
-            </div>
-            <div class="community-content">
-                <img src="images/city market.jpg" alt="Nairobi city market">
-                <div class="details">
-                    <p><strong>Cities:</strong> Nairobi, Mombasa, Kisumu</p>
-                    <p><strong>Economy:</strong> Tech startups, trade, services</p>
-                    <p><strong>Challenges:</strong> Unemployment, housing</p>
-                    <p>Nairobi City Market, a vibrant trading hub in Kenya's capital, buzzes with 
-                      activity as farmers, traders, and shoppers converge daily. Farmers from nearby
-                      communities bring fresh produce—beans, maize, bananas, and greens—while 
-                      fishermen from coastal regions like Lamu supply dried and fresh seafood. The
-                      market’s lively stalls and bargaining voices reflect Kenya’s agricultural 
-                      richness, bridging rural and urban economies. As a key distribution point, 
-                      it ensures fresh food reaches city dwellers while supporting small-scale
-                      producers. Beyond commerce, it’s a cultural melting pot where traditions,
-                      flavors, and stories intertwine.</p>
-                </div>
-            </div>
-        </section>
+  </div>
+</section>
 
-        <!-- Coastal Communities Section -->
-        <section class="community-card" id="coastal">
-            <div class="community-header">
-                <h2>Coastal Communities</h2>
-                <span class="tag tourism">Tourism & Fishing</span>
-            </div>
-            <div class="community-content">
-                <img src="images/sailing-boats-lamu-africa-BY8B81.jpg" alt="Fishing boats in Lamu">
-                <div class="details">
-                    <p><strong>Livelihoods:</strong> Fishing, tourism, coconut farming</p>
-                    <p><strong>Culture:</strong> Swahili architecture, festivals</p>
-                    <p><strong>Threats:</strong> Overfishing, coral reef degradation</p>
-                    <p>Fishing in Lamu is more than an industry—it’s a centuries-old way of life
-                       where the rhythm of the tides dictates daily routines. Dhows with billowing
-                      sails glide across the turquoise waters of the Indian Ocean, as fishermen 
-                      cast nets or line-fish for snapper, tuna, and prawns, just as their ancestors
-                      did. The catch—fresh or sun-dried—fuels Lamu’s economy, from bustling local markets
-                      to Swahili seafood feasts served in beachside restaurants. Here, every haul tells a story of 
-                      resilience, culture, and the deep bond between people and the sea.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <a href="index.html" class="btn btn-primary">Made with love by Olof Jonson</a>
+  </div>
+</footer>
 
-    <footer>
-        
-      <a href="index.html" class="btn btn-primary"> Made with love by Olof Jonson</a>
-  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
